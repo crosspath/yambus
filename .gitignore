@@ -1,0 +1,16 @@
+# Desktop Environment / OS
+.directory
+.DS_Store
+Thumbs.db
+[Dd]esktop.ini
+~$*
+
+/tmp/*
+
+/node_modules
+/yarn-error.log
+yarn-debug.log*
+.yarn-integrity
+
+# Packages
+*.tgz
