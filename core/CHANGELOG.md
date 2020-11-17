@@ -1,5 +1,9 @@
 # Changelog
 
+# Version 0.2.1
+
+Fix file list in `package.json`.
+
 # Version 0.2.0
 
 1. Extract Axios-related functionality to NPM package 'yambus-axios'.

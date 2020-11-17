@@ -1,5 +1,5 @@
-import yambus from '@crosspath/yambus'
-import axios from 'axios'
+const yambus = require('@crosspath/yambus')
+const axios  = require('axios')
 
 function add_data(params) {
   const data = params.data
@@ -12,7 +12,7 @@ function add_data(params) {
   return data
 }
 
-export function request(route, params, set_options) {
+function request(route, params, set_options) {
   let options = {
     url:    params.path,
     method: route.verb,
@@ -25,3 +25,5 @@ export function request(route, params, set_options) {
 
   return axios.request(options)
 }
+
+module.exports = {request: request}

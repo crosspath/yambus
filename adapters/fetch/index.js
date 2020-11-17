@@ -1,5 +1,5 @@
-import yambus from '@crosspath/yambus'
-import qs from 'query-string'
+const yambus = require('@crosspath/yambus')
+const qs     = require('query-string')
 
 // query-string
 const QS_OPTIONS = {
@@ -37,7 +37,7 @@ function add_data(route, params) {
   return as_json(route, params)
 }
 
-export function request(route, params, set_options) {
+function request(route, params, set_options) {
   const url  = build_url(params)
 
   let options = {method: route.verb}
@@ -48,3 +48,5 @@ export function request(route, params, set_options) {
 
   return fetch(url, options).then(response => response.json())
 }
+
+module.exports = {request: request}
