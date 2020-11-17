@@ -1,0 +1,13 @@
+{
+  "name": "@crosspath/yambus",
+  "version": "0.2.0",
+  "description": "Generate functions for accessing application routes & doing requests",
+  "main": "index.js",
+  "repository": "git@github.com:crosspath/yambus.git",
+  "author": "Evgeniy Nochevnov",
+  "license": "MIT",
+  "dependencies": {
+    "object-to-formdata": "^4.1.0"
+  },
+  "files": ["index.js"]
+}

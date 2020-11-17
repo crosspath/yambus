@@ -1,0 +1,16 @@
+{
+  "name": "@crosspath/yambus-fetch",
+  "version": "0.1.0",
+  "description": "Fetch adapter for Yambus for generating requests",
+  "main": "index.js",
+  "repository": "git@github.com:crosspath/yambus.git",
+  "author": "Evgeniy Nochevnov",
+  "license": "MIT",
+  "dependencies": {
+    "query-string": "^6.13.7"
+  },
+  "peerDependencies": {
+    "yambus": "^0.2.0"
+  },
+  "files": ["index.js"]
+}

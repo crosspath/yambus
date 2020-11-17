@@ -54,32 +54,9 @@ function build_request_options(route, args) {
       map(v => typeof v === 'string' ? v : params.path_params[v.a]).join('')
   if (params.format)
     path += `.${params.format}`
-  if (['get', 'delete'].includes(route.verb))
+  if (['get', 'head', 'delete'].includes(route.verb))
     params.data = null
   return {path: path, url_options: params.url_options, data: params.data}
 }
 
-function generate_route_functions(routes, request_function) {
-  const request_functions = Object.fromEntries(
-    Object.entries(routes).map(pair => {
-      const route = pair[1]
-      const func  = (...args) => request_function(route, args)
-      return [pair[0], func]
-    })
-  )
-
-  const path_functions = Object.fromEntries(
-    Object.entries(routes).map(pair => {
-      const route = pair[1]
-      const func  = (...args) => build_request_options(route, args).path
-      return [`${pair[0]}_path`, func]
-    })
-  )
-
-  return Object.assign({}, request_functions, path_functions)
-}
-
-module.exports = {
-  build_request_options:    build_request_options,
-  generate_route_functions: generate_route_functions
-}
+module.exports = {build_request_options: build_request_options}
