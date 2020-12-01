@@ -29,6 +29,7 @@ Routes.route_name({url: 'test-value'}).then(body => console.log(body))
 ```
 
 These functions return `Promise`. Variable `body` here contains response data.
+Expected request & response format is JSON.
 
 ## Contributing
 

@@ -46,7 +46,11 @@ function request(route, params, set_options) {
   if (typeof set_options === 'function')
     options = set_options(url, options, route, params)
 
-  return fetch(url, options).then(response => response.json())
+  return fetch(url, options).then(response => {
+    if (response.ok)
+      return response.json()
+    return response.json().then(body => Promise.reject(body))
+  })
 }
 
 module.exports = {request: request}
