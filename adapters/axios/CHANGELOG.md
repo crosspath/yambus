@@ -1,5 +1,9 @@
 # Changelog
 
+# Version 0.1.2
+
+Fix peer dependency.
+
 # Version 0.1.1
 
 Change imports/exports model from ES modules to `require`/`module.exports`.

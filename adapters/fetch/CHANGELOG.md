@@ -1,5 +1,9 @@
 # Changelog
 
+# Version 0.1.3
+
+Fix peer dependency.
+
 # Version 0.1.2
 
 Return rejected promise on error response.
